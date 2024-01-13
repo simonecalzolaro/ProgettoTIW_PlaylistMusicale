@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+
+.error {
+	color: red;
+	text-align: center;
+	font-size: 16px; /* Aggiunto per maggiore evidenza */
+	margin-top: 10px; /* Aggiunto margine superiore */
+}
+
+.selected {
+	color: #ff4500; /* Arancione scuro */
+	font-weight: bold; /* Testo in grassetto per maggiore enfasi */
+}
+
+.notSelected {
+	color: black;
+}
+
+.tableHeader {
+	background: #ff8c00; /* Arancione chiaro */
+	color: white; /* Testo bianco per contrasto */
+	padding: 10px; /* Aggiunto spaziatura interna */
+}
+
+.before {
+	position: fixed;
+	margin: 0% 2% 0% 0%; /* Ridotto il margine destro e spostato a destra */
+}
+
+.next {
+	float: right;
+	margin-right: 5%;
+}
+
+.goToSortingPageButton {
+	position: relative;
+	margin: 5%;
+	padding: 10px; /* Aggiunto spaziatura interna */
+	background: #4caf50; /* Verde */
+	color: white; /* Testo bianco per contrasto */
+	border: none; /* Nessun bordo */
+	border-radius: 5px; /* Bordi arrotondati */
+	cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
+
+fieldset {
+	margin-right: 60px;
+	width: 250px;
+	margin: auto;
+}
+
+img {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%; /* Rendi l'immagine circolare */
+}
+
+table,
+th,
+td {
+	border: 1px solid #ddd; /* Grigio più leggero per i bordi */
+	margin: auto;
+}
+
+.simpleTable {
+	border: 0px;
+}
+
+td {
+	text-align: center;
+	vertical-align: middle;
+	padding: 8px; /* Aggiunto padding per spaziatura */
+}
+
+body {
+	text-align: center;
+	font-family: 'Arial', sans-serif; /* Stile del carattere */
+}
+
+.logout {
+	float: right;
+	text-align: right;
+	margin-right: 7%;
+	margin-top: -5%;
+}
+
+.homePage {
+	float: left;
+	margin-left: 5%;
+	text-align: center;
+}
+
+.playlistPage {
+	float: right;
+	margin-right: 11%;
+	margin-top: 10%;
+	text-align: center;
+}
+
+.songPage {
+	position: center;
+	margin: 27% 0% 10% 47%;
+	text-align: center;
+}
+
+.playlistTable {
+	float: left;
+	margin-left: 30%;
+	text-align: left;
+}
+
+.createPlaylistField {
+	float: left;
+	margin-left: 15%;
+	margin-top: 20%;
+	text-align: left;
+}
+
+.createSongField {
+	text-align: right;
+	margin: 5% 0% 10% 15%;
+}
+
+.sortPlayListPage {
+	text-align: center;
+}
+
+.playlistToOrder {
+	position: relative;
+	margin: 0% 0% 0% 12%;
+}
+
+.songPage{
+	float: right;
+	margin-right: 11%;
+	margin-top: -50%;
+	text-align: center;
+}
+
+
+
+
+/* Add more styles as needed */
