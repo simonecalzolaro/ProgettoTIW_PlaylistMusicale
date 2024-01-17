@@ -1,66 +1,36 @@
-@charset "UTF-8";
-
-
 .error {
-	color: red;
-	text-align: center;
-	font-size: 16px; /* Aggiunto per maggiore evidenza */
-	margin-top: 10px; /* Aggiunto margine superiore */
+	color:red;
 }
 
-.selected {
-	color: #ff4500; /* Arancione scuro */
-	font-weight: bold; /* Testo in grassetto per maggiore enfasi */
-}
-
-.notSelected {
-	color: black;
-}
-
-.tableHeader {
-	background: #ff8c00; /* Arancione chiaro */
-	color: white; /* Testo bianco per contrasto */
-	padding: 10px; /* Aggiunto spaziatura interna */
-}
+/*.songsTable {
+	margin-left: auto;
+  	margin-right: auto;
+}*/
 
 .before {
-	position: fixed;
-	margin: 0% 2% 0% 0%; /* Ridotto il margine destro e spostato a destra */
+	position: relative;
+	left: -170px;
 }
 
 .next {
-	float: right;
-	margin-right: 5%;
-}
-
-.goToSortingPageButton {
 	position: relative;
-	margin: 5%;
-	padding: 10px; /* Aggiunto spaziatura interna */
-	background: #4caf50; /* Verde */
-	color: white; /* Testo bianco per contrasto */
-	border: none; /* Nessun bordo */
-	border-radius: 5px; /* Bordi arrotondati */
-	cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+	left: 350px;
 }
 
-fieldset {
+fieldset{
 	margin-right: 60px;
 	width: 250px;
-	margin: auto;
+	margin:auto;
 }
 
-img {
+img{
 	height: 100px;
 	width: 100px;
-	border-radius: 50%; /* Rendi l'immagine circolare */
 }
 
-table,
-th,
-td {
-	border: 1px solid #ddd; /* Grigio più leggero per i bordi */
-	margin: auto;
+table , th , td {
+  	border: 1px solid black;
+  	margin: auto;
 }
 
 .simpleTable {
@@ -68,77 +38,37 @@ td {
 }
 
 td {
-	text-align: center;
-	vertical-align: middle;
-	padding: 8px; /* Aggiunto padding per spaziatura */
+  text-align: center;
+  vertical-align: middle;
 }
 
 body {
 	text-align: center;
-	font-family: 'Arial', sans-serif; /* Stile del carattere */
-}
-
-.logout {
-	float: right;
-	text-align: right;
-	margin-right: 7%;
-	margin-top: -5%;
-}
-
-.homePage {
-	float: left;
-	margin-left: 5%;
-	text-align: center;
-}
-
-.playlistPage {
-	float: right;
-	margin-right: 11%;
-	margin-top: 10%;
-	text-align: center;
-}
-
-.songPage {
-	position: center;
-	margin: 27% 0% 10% 47%;
-	text-align: center;
 }
 
 .playlistTable {
-	float: left;
-	margin-left: 30%;
-	text-align: left;
+	position: relative;
+	margin: 0% 50% 0% 20% ;
 }
 
 .createPlaylistField {
-	float: left;
-	margin-left: 15%;
-	margin-top: 20%;
-	text-align: left;
+	position: relative;
+	margin: 0% 45% 0% 26% ;
 }
 
 .createSongField {
+	position: fixed;
+	margin: 0% -50% 0% 50% ;
+}
+
+.logout {
+	/*
+	position: fixed;
+	margin-bottom: 25%;
+	margin-top: -30%;
+	margin-left: 90%; */
 	text-align: right;
-	margin: 5% 0% 10% 15%;
-}
-
-.sortPlayListPage {
-	text-align: center;
-}
-
-.playlistToOrder {
-	position: relative;
-	margin: 0% 0% 0% 12%;
-}
-
-.songPage{
-	float: right;
-	margin-right: 11%;
-	margin-top: -50%;
-	text-align: center;
+	margin-right: 10%;
 }
 
 
-
-
-/* Add more styles as needed */

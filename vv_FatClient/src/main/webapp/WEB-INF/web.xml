@@ -31,6 +31,29 @@
 	<param-value>/Users/simonecalzolaro/eclipse-workspace/Progetto_tiw_JS/resources/mp3/
 </param-value>
   </context-param>
+  
+    <error-page>
+        <error-code>404</error-code>
+        <location>/ErrorHandler</location>
+  
+    </error-page>
+       <error-page>
+        <error-code>405</error-code>
+        <location>/ErrorHandler</location>
+  
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/ErrorHandler</location>
+  
+    </error-page>
+    
+       <error-page>
+        <error-code>403</error-code>
+        <location>/SessionHandler</location>
+  
+    </error-page>
 
 
   <!--Welcome files-->

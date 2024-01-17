@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset = "UTF-8">
+		<link rel="stylesheet" type="text/css" media="all" href="CSS/login.css" th:href="@{/CSS/login.css}"/> 
+		
+		<title> BeatHub </title>
+	</head>
+	
+	<body>
+		<h1> Welcome to BeatHub </h1>
+		<h2> Log in </h2>
+		
+			<form action="CheckLogin" method="POST">
+				<label for="user">UserName:</label>
+				<input type="text" id="user" name="user" required><br><br>
+				
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" required><br><br>
+				
+				<input type="submit" value="submit">	
+				
+				<p th:class="error" th:text="${invalidMethod}"></p>
+				<p th:class="error" th:text="${missingParameters}"></p>
+				<p th:class="error" th:text="${expiredSession}"></p>
+				<p th:class="error" th:text="${error}"></p>
+				
+				
+				
+				
+				
+				
+				
+				
+					
+			</form>
+	
+		
+		<br>
+		<div>
+			<a href="registrationPage.html"> Sign in</a>
+		</div>
+	
+	
+	</body>
+
+</html>

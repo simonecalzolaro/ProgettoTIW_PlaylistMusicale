@@ -24,13 +24,13 @@
 }
 
 .before {
-	position: fixed;
+	position: left;
 	margin: 0% 2% 0% 0%; /* Ridotto il margine destro e spostato a destra */
 }
 
 .next {
 	float: right;
-	margin-right: 5%;
+	margin: 0% 0% 0% 2%;
 }
 
 .goToSortingPageButton {
@@ -134,7 +134,7 @@ body {
 .songPage{
 	float: right;
 	margin-right: 11%;
-	margin-top: -50%;
+	margin-top: -20%; /*-50*/
 	text-align: center;
 }
 

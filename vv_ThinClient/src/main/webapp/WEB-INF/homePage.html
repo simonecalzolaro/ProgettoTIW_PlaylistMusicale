@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" media="all" href="CSS/home.css"
+	th:href="@{/CSS/home.css}" />
+
+<title>HomePage</title>
+</head>
+
+<body>
+	<h1>BeatHub</h1>
+	<h2>
+		Welcome back <span th:text="${user.username}"></span>
+	</h2>
+	<div class="logout">
+		<a th:href="@{Logout}">Logout</a>
+	</div>
+	<br>
+	
+	<div th:class="error">
+		<p th:text="${invalidMethod}">
+			
+	</div>
+
+	<div th:class="playlistTable" th:if="${#lists.isEmpty(playlists)}">
+		No playList yet</div>
+	<div th:class="playlistTable" th:if="${not #lists.isEmpty(playlists)}">
+		<table>
+			<thead>
+				<tr>
+					<th>PlayList name</th>
+					<th>Creation date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="p : ${playlists}">
+					<td><a
+						th:href="@{GoToPlayListPage(playlistId=${p.id} , section=0)}">
+							<span th:text="${p.title}"></span>
+					</a></td>
+					<td><span
+						th:text="${#dates.format(p.creationDate , 'dd.MM.yyyy')}"></span></td>
+				</tr>
+			</tbody>
+		</table>
+		<p th:class="error" th:text="${errorMsg2}"></p>
+	</div>
+
+
+	<br>
+	<br>
+
+	<fieldset th:class="createPlaylistField">
+		<form th:action="@{/CreatePlaylist}" method="POST">
+			Create a new playList<br>
+			<p>
+				Title: <input type="text" id="title" name="title" required>
+			</p>
+
+			<div th:if="${#lists.isEmpty(songs)}">No song Available</div>
+			<div th:if="${not #lists.isEmpty(songs)}">
+
+				<label for="canzoni">Choose songs:</label>
+				<div th:each="s : ${songs}">
+					<p><input type="checkbox" name="canzoni" th:text="${s.title}"
+						th:value="${s.id}"><p>
+				</div>
+
+
+
+
+			</div>
+
+
+
+
+
+
+			<p>
+				<input type="submit" value="submit">
+			</p>
+			<p th:class="error" th:text="${errorPlaylist}">
+	
+			
+			
+		
+		</form>
+	</fieldset>
+	
+
+	
+
+	<br> <br>
+	
+		
+			<fieldset class="createSongField">
+		<form th:action="@{/CreateSong}" method="POST"
+			enctype="multipart/form-data">
+			Add a new song in your DataBase<br>
+			<p>
+				Title: <input type="text" id="title" name="title" required>
+			</p>
+			<p>
+				Genre: <select id="genre" name="genre" required>
+					<option value="Pop">Pop</option>
+					<option value="Rock">Rock</option>
+					<option value="Reggae">Reggae</option>
+					<option value="Hip_hop">Hip Hop</option>
+					<option value="Classical">Classical</option>
+					<option value="Ambient">Ambient</option>
+
+
+				</select>
+			</p>
+			<p>
+				Album title: <input type="text" id="albumTitle" name="albumTitle"
+					required>
+			</p>
+			<p>
+				Singer: <input type="text" id="singer" name="singer" required>
+			</p>
+			<p>
+				Album publication year: <input type="number" id="date" name="date"
+					required>
+			</p>
+			<p>
+				Album image: <input type="file" name="albumImg" accept="image/*"
+					required>
+			</p>
+			<p>
+				MP3 file: <input type="file" name="songFile" accept="audio/*"
+					required>
+			</p>
+			<p>
+				<input type="submit" value="submit">
+			</p>
+		
+			<p th:class='error' th:text="${errorSong}">
+		
+		</form>
+	</fieldset>
+	
+
+
+
+	
+
+</body>
+
+</html>

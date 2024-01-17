@@ -307,7 +307,7 @@
 						   case 200:
 							      incomingSongs  = JSON.parse(request.responseText);
 
-							   if (incomingSongs.length == 0) {
+							   if (incomingSongs.length == 0) { 
 								   self.listBodyContainer.textContent = "No songs yet";
 
 								   handleButtons.hideNext();
@@ -843,7 +843,7 @@
 			console.log("START PAGE --> ");
 			playListSongsToOrder = new PlayListSongsToOrder();
 			
-            //Set the personal message and show it. Question: why I don't have to save the container in the object as for the userName?
+            //Set the personal message and show it.
             personalMessage = new PersonalMessage(sessionStorage.getItem("userName") , document.querySelector("#userName"));
             personalMessage.show();
             

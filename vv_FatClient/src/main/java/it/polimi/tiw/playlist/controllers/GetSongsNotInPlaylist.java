@@ -54,7 +54,7 @@ public class GetSongsNotInPlaylist extends HttpServlet{
 	    
 	    
 	    if(s.isNew() || user == null || !user.getUserName().equals(request.getHeader("user"))) {
-			response.setStatus(HttpServletResponse.SC_FORBIDDEN); //Code 403
+	    	response.sendError(HttpServletResponse.SC_FORBIDDEN); //Code 403
 		    System.out.println("out");
 
 			return;

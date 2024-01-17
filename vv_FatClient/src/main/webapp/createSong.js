@@ -26,7 +26,7 @@
                 document.getElementById("songError").textContent = "Publication year is not a number";
                 return;
             }
-            if(publicationYear > (new Date().getFullYear())){
+            if(publicationYear > (new Date().getFullYear()) || publicationYear < 0){
                 document.getElementById("songError").textContent = "Publication year not valid";
                 return;
             }

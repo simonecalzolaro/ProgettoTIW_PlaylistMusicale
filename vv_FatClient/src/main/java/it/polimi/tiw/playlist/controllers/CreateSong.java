@@ -71,7 +71,7 @@ public class CreateSong extends HttpServlet{
 		
 		 
 	    if(s.isNew() || user == null || !user.getUserName().equals(request.getHeader("user"))) {
-			response.setStatus(HttpServletResponse.SC_FORBIDDEN); //Code 403
+	    	response.sendError(HttpServletResponse.SC_FORBIDDEN); //Code 403
 		    System.out.println("out");
 
 			return;
@@ -94,7 +94,7 @@ public class CreateSong extends HttpServlet{
 			int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 			
 			//Check if the publicationYear is not bigger than the current year
-			if(publicationYear > currentYear)
+			if(publicationYear > currentYear || publicationYear < 0)
 				error += "Invalid date;";
 		}catch(NumberFormatException e) {
 			error += "Date not valid;";
